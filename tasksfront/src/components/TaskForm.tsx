@@ -23,24 +23,24 @@ function TaskForm() {
   return (
     <form onSubmit={handleSubmit}>
       <input
-        name="title"
-        type="text"
-        placeholder="Write a task"
+        name=
+        type=
+        placeholder=
         onChange={handleChange}
         className="border-2 border-gray-700 p-2 rounded-lg bg-zinc-800 block w-full my-2"
       />
 
       <textarea
-        name="description"
-        rows={3}
+        name=
+        rows=
         onChange={handleChange}
         className="border-2 border-gray-700 p-2 rounded-lg bg-zinc-800 block w-full my-2"
-        placeholder="Write a description"
+        placeholder=
       ></textarea>
 
       <label className="inline-flex items-center gap-x-2">
         <input
-          type="checkbox"
+          type=
           value={task.done ? 1 : 0}
           onChange={() =>
             setTask({
@@ -50,11 +50,11 @@ function TaskForm() {
           }
           className="form-checkbox h-5 w-5 text-indigo-600 transition duration-150 ease-in-out "
         />
-        <span>Done</span>
+        <span></span>
       </label>
 
       <button type="submit" className="bg-indigo-500 px-3 block py-2 w-full">
-        Save
+        
       </button>
     </form>
   );

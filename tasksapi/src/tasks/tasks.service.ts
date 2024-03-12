@@ -9,9 +9,8 @@ import { Task } from 'src/schemas/task.schema';
 export class TasksService {
   constructor(@InjectModel(Task.name) private taskModel: Model<Task>) {}
 
-  async create(createTaskDto: CreateTaskDto): Promise<Task> {
-    const createdTask = new this.taskModel(createTaskDto);
-    return createdTask.save();
+  async create():  {
+
   }
 
   async findAll(): Promise<Task[]> {
@@ -19,14 +18,14 @@ export class TasksService {
   }
 
   async findOne(id: string): Promise<Task> {
-    return this.taskModel.findById(id).exec();
+  
   }
 
-  async delete(id: string): Promise<Task> {
-    return this.taskModel.findByIdAndDelete(id);
+  async delete():  {
+  
   }
 
-  async update(id: string, createTaskDto: UpdateTaskDto): Promise<Task> {
-    return this.taskModel.findByIdAndUpdate(id, createTaskDto, { new: true });
-  }
+  /** Colocar código de actualizar */
+
+  
 }

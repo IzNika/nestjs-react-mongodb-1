@@ -20,7 +20,7 @@ export class TasksController {
 
   @Get()
   async findAll() {
-    return this.tasksService.findAll();
+
   }
 
   @Post()
@@ -37,23 +37,17 @@ export class TasksController {
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
-    const task = await this.tasksService.findOne(id);
-    if (!task) throw new NotFoundException('Task does not exist!');
-    return task;
+
   }
 
   @Delete(':id')
   @HttpCode(204)
-  async delete(@Param('id') id: string) {
-    const task = await this.tasksService.delete(id);
-    if (!task) throw new NotFoundException('Task does not exist!');
-    return task;
+  async delete() {
+
   }
 
   @Put(':id')
-  async update(@Param('id') id: string, @Body() body: UpdateTaskDto) {
-    const task = await this.tasksService.update(id, body);
-    if (!task) throw new NotFoundException('Task does not exist!');
-    return task;
+  async update() {
+
   }
 }
