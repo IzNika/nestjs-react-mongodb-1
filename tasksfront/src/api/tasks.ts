@@ -14,9 +14,7 @@ export const createTaskRequest = async (task: CreateTask) =>
   });
 
 export const deleteTaskRequest = async (id: string) =>
-  fetch(`${API}/tasks/${id}`, {
-    method: "DELETE",
-  });
+  ;
 
 export const updateTaskRequest = async (id: string, task: UpdateTask) =>
   ;
